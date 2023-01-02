@@ -69,7 +69,7 @@ function incrementScore(){
 }
 function incrementWrongAnswer() {
     let oldScore = parseInt(document.getElementById('incorrect').innerText);
- document.getElementById('incorrect').innerText = oldScore - 1;
+ document.getElementById('incorrect').innerText = oldScore + 1;
 
 }
 
