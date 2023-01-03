@@ -15,6 +15,11 @@ document.addEventListener("DOMContentLoaded", function(){
             }
         })
     }
+    document.getElementById("answer-box").addEventListener("keydown", function(event) {
+        if (event.key ==="Enter") {
+            checkAnswer();
+        }
+    })
     runGame("addition")
     runGame("subtract")
     runGame("multiply")
@@ -24,6 +29,10 @@ document.addEventListener("DOMContentLoaded", function(){
   * and after the use answer has been processed 
     */
 function runGame(gameType) {
+    //put cursor in the box and remove previous answer
+    document.getElementById("answer-box").value = "";
+    document.getElementById("answer-box").focus();
+
     //create two random numbers
     let num1 = Math.trunc(Math.random() * 25) + 1;
     let num2 = Math.trunc(Math.random() * 25) + 1;
